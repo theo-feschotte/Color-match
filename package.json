@@ -1,0 +1,24 @@
+{
+  "name": "color-match",
+  "version": "1.0.0",
+  "description": "Trouve la bonne couleur !",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w scss/styles.scss:dist/css/styles.css"
+  },
+  "author": "Théo",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theo-feschotte/color-match.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theo-feschotte/color-match/issues"
+  },
+  "homepage": "https://github.com/theo-feschotte/color-match#readme"
+}
