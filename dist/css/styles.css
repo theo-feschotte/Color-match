@@ -19,4 +19,42 @@ body {
   user-select: none;
 }
 
+.color-match {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.color-match #picker {
+  cursor: crosshair;
+}
+.color-match__controls {
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  gap: 25px;
+  border: solid 2px hsl(0, 0%, 6%);
+  border-radius: 5px;
+}
+.color-match__controls-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.color-match__controls-label {
+  color: hsl(0, 0%, 6%);
+}
+.color-match__controls-input {
+  width: 100%;
+  color: hsl(0, 0%, 6%);
+  text-transform: uppercase;
+  border: solid 2px hsl(0, 0%, 6%);
+  border-radius: 5px;
+  background-color: transparent;
+}
+
 /*# sourceMappingURL=styles.css.map */

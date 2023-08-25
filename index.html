@@ -18,9 +18,37 @@
 
 <body>
 
-    <section class="color-match"></section>
+    <section class="color-match">
+
+        <canvas id="picker" width="300" height="300"></canvas>
+        
+        <div class="color-match__controls">
+            <div class="color-match__controls-item">
+                <label class="color-match__controls-label">R</label>
+                <input class="color-match__controls-input" id="rVal" type="text"/>
+            </div>
+            <div class="color-match__controls-item">
+                <label class="color-match__controls-label">G</label>
+                <input class="color-match__controls-input" id="gVal" type="text"/>
+            </div>
+            <div class="color-match__controls-item">
+                <label class="color-match__controls-label">B</label>
+                <input class="color-match__controls-input" id="bVal" type="text"/>
+            </div>
+            <!-- <div class="color-match__controls-item">
+                <label class="color-match__controls-label">RGB</label>
+                <input class="color-match__controls-input" id="rgbVal" type="text"/>
+            </div> -->
+            <!-- <div class="color-match__controls-item">
+                <label class="color-match__controls-label">HEX</label>
+                <input class="color-match__controls-input" id="hexVal" type="text"/>
+            </div> -->
+        </div>
+
+    </section>
 
 <!-- Scripts -->
+<script src="/dist/js/jquery.js"></script>
 <script src="/dist/js/script.js"></script>
 
 </body>

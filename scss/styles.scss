@@ -27,3 +27,40 @@ body {
     user-select: none;
 }
 
+.color-match {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    #picker {
+        cursor: crosshair;
+    }
+    &__controls {
+        width: 300px;
+        padding: 20px;
+        display: flex;
+        gap: 25px;
+        border: solid 2px $dark;
+        border-radius: 5px;
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+        }
+        &-label {
+            color: $dark;
+        }
+        &-input {
+            width: 100%;
+            color: $dark;
+            text-transform: uppercase;
+            border: solid 2px $dark;
+            border-radius: 5px;
+            background-color: transparent;
+        }
+    }
+}
