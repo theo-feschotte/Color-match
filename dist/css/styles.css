@@ -28,33 +28,74 @@ body {
   align-items: center;
   gap: 25px;
 }
-.color-match #picker {
+.color-match__color-wheel {
+  width: 300px;
+  height: 300px;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+.color-match__color-wheel-picker {
+  width: 300px;
+  height: 300px;
+  aspect-ratio: 1/1;
   cursor: crosshair;
 }
+.color-match__color-wheel-preview {
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  border-radius: 100%;
+  background-color: hsl(0, 0%, 87%);
+}
+.color-match__color-wheel-hint {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+.color-match__color-wheel-hint circle {
+  fill: none;
+  stroke-width: 50px;
+  stroke-dasharray: 157px;
+  stroke-dashoffset: 0px;
+}
+.color-match__color-wheel-hint .start {
+  animation: countdown 10s linear forwards;
+}
 .color-match__controls {
-  width: 300px;
-  padding: 20px;
-  display: flex;
-  gap: 25px;
-  border: solid 2px hsl(0, 0%, 6%);
-  border-radius: 5px;
+  margin-top: 25px;
 }
 .color-match__controls-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 .color-match__controls-label {
   color: hsl(0, 0%, 6%);
 }
 .color-match__controls-input {
-  width: 100%;
+  width: 100px;
+  padding: 5px;
   color: hsl(0, 0%, 6%);
   text-transform: uppercase;
   border: solid 2px hsl(0, 0%, 6%);
   border-radius: 5px;
   background-color: transparent;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 157px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

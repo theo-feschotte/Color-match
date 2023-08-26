@@ -35,32 +35,73 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    #picker {
-        cursor: crosshair;
+    &__color-wheel {
+        width: 300px;
+        height: 300px;
+        aspect-ratio: 1/1;
+        position: relative;
+        &-picker {
+            width: 300px;
+            height: 300px;
+            aspect-ratio: 1/1;
+            cursor: crosshair;
+        }
+        &-preview {
+            width: 150px;
+            height: 150px;
+            aspect-ratio: 1/1;
+            position: absolute;
+            top: calc(50% - 75px);
+            left: calc(50% - 75px);
+            border-radius: 100%;
+            background-color: $light-grey;
+        }
+        &-hint {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: calc(50% - 60px);
+            left: calc(50% - 60px);
+            transform: rotateY(-180deg) rotateZ(-90deg);
+            circle {
+                fill: none;
+                stroke-width: 50px;
+                stroke-dasharray: 157px;
+                stroke-dashoffset: 0px;
+            }
+            .start {
+                animation: countdown 10s linear forwards;
+            }
+        }
     }
     &__controls {
-        width: 300px;
-        padding: 20px;
-        display: flex;
-        gap: 25px;
-        border: solid 2px $dark;
-        border-radius: 5px;
+        margin-top: 25px;
         &-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 5px;
+            gap: 10px;
         }
         &-label {
             color: $dark;
         }
         &-input {
-            width: 100%;
+            width: 100px;
+            padding: 5px;
             color: $dark;
             text-transform: uppercase;
             border: solid 2px $dark;
             border-radius: 5px;
             background-color: transparent;
         }
+    }
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 157px;
     }
 }

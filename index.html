@@ -20,20 +20,18 @@
 
     <section class="color-match">
 
-        <canvas id="picker" width="300" height="300"></canvas>
+        <div class="color-match__color-wheel">
+            <canvas class="color-match__color-wheel-picker" id="picker" width="300" height="300"></canvas>
+            <div class="color-match__color-wheel-preview"></div>
+            <svg class="color-match__color-wheel-hint">
+                <circle r="25" cx="60" cy="60"></circle>
+            </svg>
+        </div>
         
         <div class="color-match__controls">
             <div class="color-match__controls-item">
-                <label class="color-match__controls-label">R</label>
-                <input class="color-match__controls-input" id="rVal" type="text"/>
-            </div>
-            <div class="color-match__controls-item">
-                <label class="color-match__controls-label">G</label>
-                <input class="color-match__controls-input" id="gVal" type="text"/>
-            </div>
-            <div class="color-match__controls-item">
-                <label class="color-match__controls-label">B</label>
-                <input class="color-match__controls-input" id="bVal" type="text"/>
+                <label class="color-match__controls-label">#HEX</label>
+                <input class="color-match__controls-input" id="hexVal" type="text"/>
             </div>
         </div>
 
